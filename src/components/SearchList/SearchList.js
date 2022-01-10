@@ -5,7 +5,6 @@ import Header from '../Header/Header';
 import key from '../../key';
 
 const SearchList = () => {
-    console.log(key);
     const val = useParams();
     const value = val.searchValue;
     const [search, setSearch] = useState({
