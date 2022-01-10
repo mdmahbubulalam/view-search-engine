@@ -15,6 +15,15 @@ const Header = (props) => {
         history.push(`/searchList/q=${searchValue}`)
         }
       }
+
+      const handleKeyPress = (e)=> {
+        if(e.key === 'Enter'){
+            if(searchValue){
+                setSearchValue(searchValue);
+                history.push(`/searchList/q=${searchValue}`)
+            }
+        } 
+      }
     return (
       
         <div className='container-fluid pt-4 pb-2 bg-white sticky-top'>
@@ -29,7 +38,7 @@ const Header = (props) => {
                 </div>
                 <div className="col-lg-10 col-md-10 col-sm-12 col-12">
                     <div className="input-box responsive">
-                        <input value={searchValue} type="text" className="search-input" placeholder='Type to Search...' onChange={e => setSearchValue(e.target.value)} /><span className='search-btn' onClick={handleClick}><FaSearch/></span>
+                        <input value={searchValue} type="text" className="search-input" placeholder='Type to Search...' onKeyPress={handleKeyPress} onChange={e => setSearchValue(e.target.value)} /><span className='search-btn' onClick={handleClick} onKeyPress={handleClick}><FaSearch/></span>
                     </div>
                 </div>
             </div>

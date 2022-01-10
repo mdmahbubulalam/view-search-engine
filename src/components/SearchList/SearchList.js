@@ -38,16 +38,16 @@ const SearchList = () => {
                     <div className="col-md-1"></div>
                     <div className="col-md-10">
                         {
-                            search.data.length!==0 ?
+                            search.data.length!==0 &&
                             <p className='mx-4'>About {search.results?.totalResults} results ({search.results?.searchTime} seconds) </p>
-                            :
-                            <h5 className='mx-4'>Please try after sometimes or Click <a href="/googleCustomSearch">
-                            here</a></h5>
+                            // :
+                            // <h5 className='mx-4'>Please try after sometimes or Click <a href="/googleCustomSearch">
+                            // here</a></h5>
                         }
                         <div className='mx-4'>
                         
                             {
-                                search.data.length>0 &&
+                                search.data.length>0 ?
                                 search.data.map((data)=>
                                     <div>
                                         {/* <a href={data.pagemap.cse_image[0].src} target='_blank'>
@@ -65,7 +65,10 @@ const SearchList = () => {
                                             </p>
                                         </div>
                                     </div>  
-                                )  
+                                )
+                                :  
+                                <h5 className='mx-4'>Please try after sometimes or Click <a href="/googleCustomSearch">
+                            here</a></h5>
                             }
                            
                         </div>
