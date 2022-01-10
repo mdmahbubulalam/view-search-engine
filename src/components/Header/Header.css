@@ -1,0 +1,60 @@
+.input-box{
+    height: 50px;
+    width: 700px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-box:hover{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .search-input{
+    border: 0;
+    outline: none;
+    width: 550px;
+    height: 25px;
+    margin: 10px;
+  }
+
+  .search-btn{
+    margin: 10px;
+    cursor: pointer;
+    background-size: 20px;
+  }
+
+  .input-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+  }
+
+  @media screen and (max-width: 1000px) {
+
+      .responsive{
+        display: flex;
+        justify-content: center;
+        
+      }
+
+      .input-field {
+        width: 450px;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .responsive{
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .input-field{
+      width: 350px;
+    }
+}

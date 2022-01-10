@@ -1,0 +1,20 @@
+.search-button{
+    border: none;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    padding-right: 14px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .responsive{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .input-box {
+    width: 350px;
+  }
+
+}
