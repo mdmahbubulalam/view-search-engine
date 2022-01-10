@@ -9,15 +9,11 @@ const Header = (props) => {
     
     const history = useHistory();
     const handleClick = (e)=> {
-        if (e.code === "Enter" || e.code === "NumpadEnter") {
-            console.log("Enter key was pressed. Run your function.");
-            e.preventDefault();
-            if(searchValue){
-            setSearchValue(searchValue);
-            history.push(`/searchList/q=${searchValue}`)
-            }
-          }
-      
+        e.preventDefault();
+        if(searchValue){
+        setSearchValue(searchValue);
+        history.push(`/searchList/q=${searchValue}`)
+        }
       }
     return (
       
